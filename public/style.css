@@ -1,6 +1,6 @@
 .bgimage {
     height:100vh;
-    background: url('images/bg.jpg');
+    background: black;
     background-size:cover;
     position:relative;
 }
