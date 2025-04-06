@@ -20,9 +20,11 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: "Solway"; margin: 0; padding: 0; }
       #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
       #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
       #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
@@ -48,7 +50,6 @@
   <body>
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
         <div class="container">
-            <a class="navbar-brand" href="#">Akash Thakare</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -86,43 +87,39 @@
 
     <section id="about">
         <div class="container mt-4 pt-4">
-            <h1 class="text-left">About Me</h1>
             <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/about.png" style="width: 300px;height: 300px;" class= "imageAboutPage">
+                <div class="col-lg-4" style="width: auto;">
+                    <img src="images/about.png" style="width: 400px;height: 400px;" class= "imageAboutPage">
                 </div>
 
                 <div class="col-lg-8">
-                    <div class="row mt-3">
+                    <div class="row mt-3" style="text-align: justify;">
                         <p>
-                          I am passionate about programming and problem solving, which drives me to create efficient and reliable solutions. 
-                          I have contributed to several software projects in different companies in my career. I build projects for learning and exploring different technologies.
-                          You can checkout my GitHub for knowing more about my current focus or interest area. Sometimes I invest time in answering questions at stackoverflow.
-                          If you have any question for which I can offer a bounty, feel free to reach out to me.
+                          I'm passionate about programming and problem-solving, which drives me to build efficient, reliable solutions. Over the years, I've contributed to several software projects across different companies, constantly learning and evolving. 
+                          <br /> <br />
+                          I also enjoy working on side projects to explore new technologies—feel free to check out my GitHub to see what I'm currently focusing on.
+
+                          From time to time, I share knowledge by answering questions on Stack Overflow. If you have an interesting question and would like to offer a bounty, don't hesitate to reach out!
                         </p>
                         <p> 
-                          When I am not immersed in programming, I indulge into Music, Chess, or Reading.
-                           If you have anything where I can contribute, please write me an email with necessary details. 
-                           I am looking forward to invest time in open source contribution which can help me to gain more confidence and experience.
+                          When I'm not coding, you'll find me immersed in music, chess, or reading. I'm always open to meaningful collaborations—if there's something I can contribute to, especially in the open-source space, drop me an email with the details. I'm actively looking to invest time in open-source contributions to deepen my skills and gain broader experience.
                         </p>
                         <p>Thank you for visiting my site.</p>
+                        <div>
+                          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bb386d5f-836f-4dad-b646-3461f4805f38" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e62ce164-30d5-4c47-a772-ec6280fc5c8e" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ac2f4891-ed3d-4cfb-be9e-58b0868e2db1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                        <span class="social-icon-container">
+                          <a class="social-icon" href="mailto:akashthakare@protonmail.com"><i class="fa fa-envelope"></i></a>&nbsp;
+                          <a class="social-icon" href="https://github.com/aakashthakare" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+                          <a class="social-icon" href="https://stackoverflow.com/users/1997093/akash" target="_blank"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+                          <a class="social-icon" href="https://www.linkedin.com/in/aakashthakare/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+                        </span>
                     </div>
                 </div>
             </div>
     </section>
-    
-    <section id="footer">
-      <div class="footer">
-        <h1 class="text-center">
-            <a class="social-icon" href="mailto:akashthakare@protonmail.com"><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;
-            <a class="social-icon" href="https://github.com/aakashthakare" target="_blank"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
-            <a class="social-icon" href="https://stackoverflow.com/users/1997093/akash" target="_blank"><i class="fa fa-stack-overflow"></i></a>&nbsp;&nbsp;
-            <a class="social-icon" href="https://www.linkedin.com/in/aakashthakare/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
-        </h1>
-      </div>
-    </section>
-    
-
     <script src="script/script.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {

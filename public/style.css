@@ -1,6 +1,9 @@
+* {
+    font-family: "Solway";
+}
 .bgimage {
     height:100vh;
-    background: black;
+    background: cadetblue;
     background-size:cover;
     position:relative;
 }
@@ -21,7 +24,7 @@
 }
 
 .navbarScroll.navbarDark {
-    background-color: black;
+    background-color: cadetblue;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -40,5 +43,18 @@
 }
 
 .social-icon {
-    color: black;
+    color: cadetblue;
+}
+
+.social-icon-container {
+    font-size: 30px;
+}
+
+.mt-4 {
+    margin-bottom: 1.5rem !important;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    color:#3b6d6f;
 }
