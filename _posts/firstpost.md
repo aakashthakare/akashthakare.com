@@ -10,4 +10,6 @@ layout: post.njk
 
 This is the content of my first blog post.
 
-
+```java
+class Test {}
+```
