@@ -3,17 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: auto; line-height: 1.6; }
-    nav a { margin-right: 15px;}
+    html { scrollbar-gutter: stable; }
+    body { font-family: sans-serif; max-width: 700px; margin: auto; line-height: 1.6;color:#5A5A5A;}
+    footer { text-align: center; color: gray; }
+    nav ul { display: flex; list-style: none; padding: 0; margin: 0; padding:5px;}
+    nav li { margin-right: 15px; }
+    nav a { border-bottom: 3px solid transparent; text-decoration:none; padding-bottom:5px;color: inherit;}
+    nav a.active { border-bottom-color: inherit; }
   </style>
 </head>
 <body>
   <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
+    <ul>
+      <li><a href="/" class="{% if title == 'About' %}active{% endif %}">About</a></li>
+      <li><a href="/writing/" class="{% if title == 'Writing' or '/writing/' in page.url %}active{% endif %}">Writing</a></li>
+      <li><a href="/contact/" class="{% if title == 'Contact' %}active{% endif %}">Contact</a></li>
+    </ul>
   </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
   {{ content | safe }}
+  <footer>
+    <small >&copy; {{ "" | currentYear }} Akash Thakare</small>
+  </footer>
 </body>
 </html>

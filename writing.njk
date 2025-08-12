@@ -1,13 +1,14 @@
 ---
 layout: base.njk
-title: Blog
+title: Writing
 ---
-<h1>Blog Posts</h1>
+<h1>Writing</h1>
+<hr />
 <ul>
 {% for post in collections.posts %}
   <li>
     <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <small>({{ post.date | date("yyyy-MM-dd") }})</small>
+    <small><i>({{ post.date | date("dd MMM yyyy") }})</i></small>
   </li>
 {% endfor %}
 </ul>
