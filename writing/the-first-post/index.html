@@ -6,13 +6,14 @@
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
   <style>
     html { scrollbar-gutter: stable; }
-    body { font-family: sans-serif; max-width: 700px; margin: auto; line-height: 1.6;color:#5A5A5A;}
-    footer { text-align: center; color: gray; }
+    body { font-family: sans-serif; max-width: 700px; margin: auto; line-height: 1.6;color:#333;}
+    footer { text-align: center; color: #a1a3ad; }
     nav ul { display: flex; list-style: none; padding: 0; margin: 0; padding:5px;}
     nav li { margin-right: 15px; }
     nav a { border-bottom: 3px solid transparent; text-decoration:none; padding-bottom:5px;color: inherit;}
     nav a.active { border-bottom-color: inherit; }
   </style>
+   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
   <nav>
@@ -24,13 +25,18 @@
   </nav>
   <main>
     
-<h1>The First Blog Post</h1>
-<small>August 12, 2025</small>
+<h1 style='padding-bottom:0;margin-bottom:0'>The First Blog Post</h1>
+<small style='color:gray'>August 12, 2025</small>
+<small style='color:gray;float:right;'>1 min read</small>
 <hr/>
 
   </main>
-  <img src='/assets/images/new-journey.png' height='300px' width='250px' />
+  <img src='/assets/images/new-journey.png' height='400px' width='300px' />
 <p>I’ve decided to start writing my blog posts here as well. The existing <a href="https://www.blog.akashthakare.com/">blog</a> will continue to remain there.</p>
+<pre class="mermaid">stateDiagram-v2
+    direction LR
+    Blogger --&gt; Website: Moving
+</pre>
 <h3><em>But Why?</em></h3>
 <p>In my opinion this setup will give me better control and flexibility to do more compared to Google Blogger. I had explored it enough and it has been an insightful learning experience in understanding and tweaking it for my needs.</p>
 <p>I just wanted to simplify and optimize my setup by bringing everything under one umbrella.</p>
@@ -41,5 +47,8 @@
   <footer>
     <small >&copy; 2025 Akash Thakare</small>
   </footer>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 </body>
 </html>
