@@ -4,9 +4,15 @@ date: 2025-08-12
 layout: post.njk
 ---
 
-<img src='/assets/images/new-journey.png' height='300px' width='250px' />
+<img src='/assets/images/new-journey.png' height='400px' width='300px' />
 
 I’ve decided to start writing my blog posts here as well. The existing [blog](https://www.blog.akashthakare.com/) will continue to remain there.
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    Blogger --> Website: Moving
+```
 
 ### _But Why?_
 
