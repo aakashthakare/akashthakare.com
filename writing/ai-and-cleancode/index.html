@@ -22,30 +22,36 @@
     nav li { margin-right: 15px; }
     nav a { border-bottom: 3px solid transparent; text-decoration:none; padding-bottom:5px;color: inherit;}
     nav a.active { border-bottom-color: inherit; }
+    blockquote{ border-left: 3px solid #888; margin-left: 0; padding-left: 5px; color: #888;}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
 </head>
 <body>
   <nav>
     <ul>
       <li><a href="/" class="">About</a></li>
       <li><a href="/writing/" class="active">Writing</a></li>
+      <li><a href="/slide/" class="">Slide</a></li>
       <li><a href="/contact/" class="">Contact</a></li>
-      <li><a href="/slide/" class="" hidden>Slide</a></li>
     </ul>
   </nav>
   <main>
     
 <h1 style='padding-bottom:0;margin-bottom:0'>AI and Clean Code</h1>
-<small style='color:gray'>August 24, 2025</small>
-<small style='color:gray;float:right;'>4 min read</small>
+<small style='color:gray'>August 21, 2025</small>
+<small style='color:gray;float:right;'>7 min read</small>
 <hr/>
 
   </main>
   <img src='/assets/images/post/ai-and-clean-code-cover.png' height='500px' width='100%' />
 <h2>Clean Code</h2>
-<p>Clean Code in simple terms; Code which is easy to read, understand and maintain. Which is popularized by Robert C. Martin in his <a href="https://amzn.in/d/255Gkj5">book</a> &quot;Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series)&quot;. You can also read a quick summary <a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29">here</a>.</p>
-<p>In a nutshell, a practice which helps the team in longer run; having said that we may encounter many scenarios where we may need to trade-off between the practice and the business needs. You may write code on your own or through AI assistant clean code is essential for any application irrespective of it's domain or scale.</p>
+<p>Clean Code, in simple terms, is code that is easy to read, understand, and maintain. The concept was popularized by Robert C. Martin in his <a href="https://amzn.in/d/255Gkj5">book</a> &quot;Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series)&quot;. You can also read a quick summary <a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29">here</a>.</p>
+<p>In a nutshell, Clean Code is a practice that helps teams in the long run. However, in real-world scenarios, developers may need to trade off between following the practice strictly and meeting business needs. Whether you write code yourself or with the help of an AI assistant, Clean Code is essential for any application, irrespective of its domain or scale.</p>
 <p>Clean code practice brings several benefits,</p>
 <ul>
 <li>Reduces overall time to understand the code</li>
@@ -57,24 +63,24 @@
 </ul>
 <p>Apparently, business needs and stricter deadlines, teams may compromise with Clean Code. However, the habit of coming back to this practice again and again is essential for a team.</p>
 <h2>GenAI - Coding Assistants</h2>
-<p>In the era of GenAI based coding assistants has emerged drastically in last few years - disrupting the conventional way of writing code. Software developers has started relying more and more on these tools for writing code faster and that too with best possible approach - adding much more responsibilty on the shoulders of developer to ensure that the generated code is 'generated' as per the expectations or not - subject to the volatality of the GenAI field and the <a href="https://youtu.be/7k1ehaE0bdU?t=7691">claim</a> of replacing engineers (<em>humans</em>).</p>
-<p>Things are changing and continue to change in different directions. However, one thing is clear that we will have one strong companion who can help us with great speed and flexibility - depending on the instructions (<em>prompts</em>) we extend in the first place. The game has shifted from being consistently <em>writing</em> effective code to effectively <em>guiding</em> to write consistent code. The former one was more fun to be honest but yet newer one is not a party pooper - even it may seem so.</p>
+<p>In the era of GenAI, coding assistants have emerged rapidly in the last few years - disrupting the conventional way of writing code. Software developers have started relying more and more on these tools for writing code faster and that too with best possible approach - placing more responsibility on developers to ensure that the generated code meets expectations, especially given the volatility of the GenAI field and the <a href="https://youtu.be/7k1ehaE0bdU?t=7691">claim</a> of replacing engineers (<em>humans</em>).</p>
+<p>Things are changing and continue to change in different directions. However, one thing is clear that we will have one strong companion who can help us with great speed and flexibility - depending on the instructions (<em>prompts</em>) we extend in the first place. The game has shifted from being consistently <em>writing</em> effective code to effectively <em>guiding</em> to write consistent code. To be honest, the former was more fun, but the new approach is not necessarily a party pooper — even if it sometimes feels that way.</p>
 <p>There are several advantages we can definitely observe with this way of writing code - subject to context and prompts. Listing few of them for reference,</p>
 <ul>
 <li>Super fast in solving complex coding problems</li>
-<li>Rapid onboarding of new team member</li>
+<li>Rapid onboarding of new team members</li>
 <li>Automation of monotonous tasks</li>
 <li>Early detection of bugs in code</li>
 <li>Driven by data instead of intuition</li>
 <li>Real time code suggestions and optimizations</li>
-<li>Equally Support for modern and legacy systems</li>
+<li>Equal Support for modern and legacy systems</li>
 </ul>
 <h2>Coding Assistant and Clean Code</h2>
-<p>Currently, majority of software developers are using coding assistant - but weather most of them using it effectively or not is a better question. Coding assistants are navigators and not drivers, developers should be at front seat and think of assistant as someone sitting next to you helping to drive <em>properly</em> and moving into the right <em>direction</em>.</p>
+<p>Currently, the majority of software developers are using coding assistants — but whether they are using them effectively is a better question. Coding assistants are navigators, not drivers. Developers should always remain in the driver’s seat and think of assistant as someone sitting next to you helping to drive <em>properly</em> and moving into the right <em>direction</em>.</p>
 <p>Remember, the navigator may distract or show wrong direction. (<em>imagine your parent/spouse</em> 😅).</p>
 <img src='/assets/images/post/driver-navigator.png' height='450px' width='100%' />
 <p>Coding assistant is growing much faster than expected because of the backed models and industry shift. Organisations are competing for <em>faster</em> growth along with better quality. There are numerous coding assistants which are shaping (<em>changing</em>) the way we developers code.</p>
-<p>Listing few popular tools are listed below,</p>
+<p>Here are a few popular tools:</p>
 <ul>
 <li><a href="https://github.com/features/copilot">Copilot</a></li>
 <li><s>Codeium</s> <a href="https://windsurf.com/">Windsurf</a></li>
@@ -82,12 +88,101 @@
 <li><a href="https://kiro.dev/">kiro</a></li>
 <li><a href="https://www.tabnine.com/">Tabnine</a></li>
 </ul>
-<p>Some are assistants while some being editor by giving whole IDE equipped with AI features to enable strong control and enhanced capabilities. These tools are instructed by prompt while backed by data and context.</p>
+<p>Some are assistants, while others provide a complete IDE equipped with AI features to enable strong control and enhanced capabilities. These tools are instructed by prompt while backed by data and context.</p>
 <p>Bringing back the attention to the Clean Code; simple question could be  &quot;<em>Can't all AI assistant be configured to write Clean Code?</em>&quot;.</p>
 <ul>
 <li>If the answer is <strong>Yes</strong> - &quot;<em>Do we still need to worry much about Clean Code?</em>&quot;</li>
 <li>If the answer is <strong>No</strong> - &quot;<em>How can we ensure the assistant suggest Clean Code?</em>&quot;</li>
 </ul>
+<p>The answer is between Yes and No and the reason is 'Training Data Bias'.</p>
+<p>AI models are trained on code from public repositories, blogs, and forums. As a result, the generated code can be either clean or messy. While you may often get reasonably clean code, you cannot blindly trust it. The primary focus is correctness and speed; not maintainability, readability, testability etc.</p>
+<p>This makes it even more important to understand and practice Clean Code yourself. At the same time, modifying your prompts to explicitly request clean practices can be a helpful habit — especially when dealing with complex logic.</p>
+<p>Let's compare two prompts,</p>
+<blockquote>
+<p>&quot;Write Java code to calculate factorial of a number.&quot;</p>
+</blockquote>
+<pre><code class="language-java">public class Factorial {
+    public static int fact(int n) {
+        if(n == 0) return 1;
+        else return n * fact(n-1);
+    }
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println(fact(n));
+    }
+}
+</code></pre>
+<blockquote>
+<p>&quot;Write clean, maintainable Java code to calculate factorial of a number. Use meaningful names, follow single responsibility principle, add input validation, comments, and handle edge cases.&quot;</p>
+</blockquote>
+<pre><code class="language-java">public class FactorialCalculator {
+
+    /**
+     * Calculates the factorial of a non-negative integer.
+     *
+     * @param number non-negative integer
+     * @return factorial of the number
+     * @throws IllegalArgumentException if number is negative
+     */
+    public static long calculateFactorial(int number) {
+        if (number &lt; 0) {
+            throw new IllegalArgumentException(&quot;Factorial is not defined for negative numbers.&quot;);
+        }
+
+        long result = 1;
+        for (int i = 1; i &lt;= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int input = 5;
+        long factorial = calculateFactorial(input);
+        System.out.println(&quot;Factorial of &quot; + input + &quot; is: &quot; + factorial);
+    }
+}
+</code></pre>
+<p>We can clearly see the difference in generated code.</p>
+<blockquote>
+<p>&quot;Write clean, maintainable, <strong>testable</strong> Java code to calculate factorial of a number. Use meaningful names, follow single responsibility principle, add input validation, comments, and handle edge cases.&quot;</p>
+</blockquote>
+<pre><code class="language-java">/**
+ * FactorialCalculator provides a method to calculate the factorial of a number.
+ */
+public class FactorialCalculator {
+
+    /**
+     * Calculates the factorial of a non-negative integer.
+     *
+     * @param number non-negative integer
+     * @return factorial of the number
+     * @throws IllegalArgumentException if number is negative
+     */
+    public long calculateFactorial(int number) {
+        if (number &lt; 0) {
+            throw new IllegalArgumentException(&quot;Factorial is not defined for negative numbers.&quot;);
+        }
+
+        long result = 1;
+        for (int i = 2; i &lt;= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+}
+</code></pre>
+<p>Adding testability factor makes it switch to <em>non-static</em> method.</p>
+<p>But you don't need to write it again and again. You can introduce clean code practice into the context itself and forget. Everytime it tries to answer based on the context you will always receive clean code induced response.</p>
+<p>That means we are the first reviewers of the code generated by AI. Well again, the AI can be used to review code generated by AI and let us know if another review is required putting us in a reactive role.</p>
+<pre class="mermaid">flowchart LR
+    A[Coding Assistant] --&gt;|Context Aware| B(Write Function)
+    B --&gt; |Push To Repository|C{AI Code Reviewer}
+    C --&gt;|Breach | E[Notify]
+    C --&gt;|Valid| F[Ignore]
+</pre>
+<h2>Conclusion</h2>
+<p>Clean Code practices are still highly relevant, and we must keep a close eye on AI-generated code. The coding assistants and IDE are helpers but can surely make mistakes. Instead of relying blindly on responses, proactively guide them to align with Clean Code practices and keep yourself accountable to ensure the code that you are asking to generate or using in your code base needs to be aligned with Clean Code practices.</p>
 
   <footer>
     <small >&copy; 2025 Akash Thakare</small>
@@ -97,5 +192,6 @@
       startOnLoad: true
     });
   </script>
+  <script>hljs.highlightAll();</script>
 </body>
 </html>
