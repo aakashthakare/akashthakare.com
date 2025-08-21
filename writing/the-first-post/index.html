@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" />
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
 
   <style>
     html { scrollbar-gutter: stable; }
@@ -18,7 +23,7 @@
     nav a { border-bottom: 3px solid transparent; text-decoration:none; padding-bottom:5px;color: inherit;}
     nav a.active { border-bottom-color: inherit; }
   </style>
-   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
   <nav>
@@ -26,6 +31,7 @@
       <li><a href="/" class="">About</a></li>
       <li><a href="/writing/" class="active">Writing</a></li>
       <li><a href="/contact/" class="">Contact</a></li>
+      <li><a href="/slide/" class="" hidden>Slide</a></li>
     </ul>
   </nav>
   <main>
@@ -36,7 +42,7 @@
 <hr/>
 
   </main>
-  <img src='/assets/images/new-journey.png' height='400px' width='300px' />
+  <img src='/assets/images/post/new-journey.png' height='400px' width='300px' />
 <p>I’ve decided to start writing my blog posts here as well. The existing <a href="https://www.blog.akashthakare.com/">blog</a> will continue to remain there.</p>
 <pre class="mermaid">stateDiagram-v2
     direction LR
@@ -53,7 +59,9 @@
     <small >&copy; 2025 Akash Thakare</small>
   </footer>
   <script>
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({
+      startOnLoad: true
+    });
   </script>
 </body>
 </html>

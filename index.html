@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" />
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
 
   <style>
     html { scrollbar-gutter: stable; }
@@ -18,7 +23,7 @@
     nav a { border-bottom: 3px solid transparent; text-decoration:none; padding-bottom:5px;color: inherit;}
     nav a.active { border-bottom-color: inherit; }
   </style>
-   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
   <nav>
@@ -26,14 +31,16 @@
       <li><a href="/" class="active">About</a></li>
       <li><a href="/writing/" class="">Writing</a></li>
       <li><a href="/contact/" class="">Contact</a></li>
+      <li><a href="/slide/" class="" hidden>Slide</a></li>
     </ul>
   </nav>
   <main>
     
   </main>
   
+
 <p align="center">
-  <img src='./assets/images/profile.png' height='200px' width='150px' />
+  <img src='./assets/images/site/profile.png' height='200px' width='200px' />
 </p>
 
 <h1>Welcome! </h1>
@@ -49,7 +56,7 @@ Currently serving at <a href="https://www.thoughtworks.com/" target="_blank">Tho
 
 <p>
 Over the years, I’ve worked on diverse software projects, learning new technologies and refining my skills along the way.
-Whether architecting scalable cloud platforms, optimizing legacy systems, or advising on best-fit technologies, I am committed to driving efficiency and innovation.
+Whether architecting scalable cloud platforms, modernizing legacy systems, or advising on best-fit technologies, I am committed to driving efficiency and innovation.
 </p>
 <p>
 When I’m not coding, you’ll probably find me enjoying music, playing chess, or reading books. I believe the best work comes from staying curious and continuously learning.
@@ -58,7 +65,9 @@ When I’m not coding, you’ll probably find me enjoying music, playing chess, 
     <small >&copy; 2025 Akash Thakare</small>
   </footer>
   <script>
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({
+      startOnLoad: true
+    });
   </script>
 </body>
 </html>
