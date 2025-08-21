@@ -2,8 +2,6 @@
 title: Carbon Emission
 layout: slide.njk
 templateEngineOverride: false
-draft: true
-date: 2025-08-24
 ---
 
 # Carbon Emission
