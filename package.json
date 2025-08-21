@@ -22,6 +22,7 @@
   "dependencies": {
     "@excalidraw/excalidraw": "^0.18.0",
     "reading-time": "^1.5.0",
+    "reveal.js": "^5.2.1",
     "roughjs": "^4.6.6"
   }
 }

@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: Slide
+---
+<h1>Slide</h1>
+<hr />
+<ul>
+{% for slide in collections.slides %}
+  <li>
+    <a href="{{ slide.url }}">{{ slide.data.title }}</a>
+  </li>
+{% endfor %}
+</ul>

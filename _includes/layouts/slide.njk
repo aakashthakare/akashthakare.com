@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" />
+
+  <style> 
+  .reveal pre {
+      box-shadow: none;
+  }
+  .reveal pre code {
+      max-height: 100%;
+      text-align: left;
+  }
+  .reveal img, .reveal h3, .reveal h2, .reveal h1{
+    margin: 0;
+  }
+  .reveal ol, .reveal dl, .reveal ul {
+    margin: 0;
+  }
+  .reveal .slides {
+    text-align: left;
+  }
+  .copyright {
+      bottom: 0;
+      color: lightgray;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      font-family: sans-serif;
+      padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <small class='copyright'>© 2025 Akash Thakare</small>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <script type="text/template">
+          {{ content | safe }}
+        </script>
+      </section>
+    </div>
+  </div>
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script>
+    Reveal.initialize({
+      plugins: [ RevealMarkdown ],
+      controls: true,
+      keyboard: true,
+      progress: true,
+      slideNumber: true,
+      controlsLayout: 'edges',
+      jumpToSlide: true,
+      center: false,
+      viewDistance: 5,
+      overview: true,
+      touch: true,
+      margin: 0.1,
+      slideNumber: 'c/t'
+    });
+    
+    document.addEventListener('keydown', function(event) {
+      if (event.key.toLowerCase() === 'x') {
+        window.location.href = '/';
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>

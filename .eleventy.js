@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 const readingTime = require('reading-time');
 
 module.exports = function(eleventyConfig) {
+
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");
   
@@ -11,6 +12,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob("./writing/*.md").filter(post => !post.data.draft).sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("slides", function(collection) {
+    return collection.getFilteredByGlob("./slide/*.md").filter(slide => !slide.data.draft).sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("currentYear", () => {
