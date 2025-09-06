@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
   <style> 
   .reveal pre {
       box-shadow: none;
@@ -24,6 +28,10 @@
   }
   .reveal .slides {
     text-align: left;
+  }
+  :root {
+    --r-main-font: "Nunito", sans-serif;
+    --r-heading-font: "Nunito", sans-serif;
   }
   .copyright {
       bottom: 0;
@@ -43,9 +51,11 @@
       <section data-markdown>
         <script type="text/template">
           
-# Carbon Emission
-
-<img src="/assets/images/slide/co2-plane-datacenter.png" height="450" width="100%" />
+# 
+<center>
+    <h2>Carbon Emission</h2>
+    <img src="/assets/images/deck/co2-plane-datacenter.png" height="600px" width="100%" />
+<center>
 
 ---
 
@@ -138,13 +148,17 @@ pie
 - Solar: ~40g/kWh
 - Nuclear/ Wind/ Hydropower: < 15g/kWh
 
+---
+
+## Example
+
 > With Coal; 1-ton air conditioner used for an hour generates ~1kg of CO2.
 
 ---
 
 ## Data Centers
 
-<img src='/assets/images/slide/carbon-emission.png' />
+<img src='/assets/images/deck/carbon-emission.png' />
 
 
 ---
@@ -153,6 +167,10 @@ pie
 
 - Data Center: ~2 to 4%
 - Commercial Flights: ~2 to 3%
+
+---
+
+## Prediction
 
 > Data centers likely going to consume up to 10% of global electricity supply in the next decade.
 
@@ -169,7 +187,7 @@ pie
 
 ### Corporate Climate Commitments
 
-<img src='/assets/images/slide/gcloud-co2-dashboard.png' />
+<img src='/assets/images/deck/gcloud-co2-dashboard.png' />
 
 ---
 #
@@ -193,8 +211,8 @@ pie
       viewDistance: 5,
       overview: true,
       touch: true,
-      margin: 0.1,
-      slideNumber: 'c/t'
+      slideNumber: 'c/t',
+      margin: 0.1
     });
     
     document.addEventListener('keydown', function(event) {
