@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: Deck
+---
+<h1>Deck</h1>
+<hr />
+<ul>
+{% for deck in collections.decks %}
+  <li>
+    <a href="{{ deck.url }}">{{ deck.data.title }}</a>
+  </li>
+{% endfor %}
+</ul>

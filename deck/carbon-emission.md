@@ -1,12 +1,14 @@
 ---
 title: Carbon Emission
-layout: slide.njk
+layout: deck.njk
 templateEngineOverride: false
 ---
 
-# Carbon Emission
-
-<img src="/assets/images/slide/co2-plane-datacenter.png" height="450" width="100%" />
+# 
+<center>
+    <h2>Carbon Emission</h2>
+    <img src="/assets/images/deck/co2-plane-datacenter.png" height="600px" width="100%" />
+<center>
 
 ---
 
@@ -99,13 +101,17 @@ pie
 - Solar: ~40g/kWh
 - Nuclear/ Wind/ Hydropower: < 15g/kWh
 
+---
+
+## Example
+
 > With Coal; 1-ton air conditioner used for an hour generates ~1kg of CO2.
 
 ---
 
 ## Data Centers
 
-<img src='/assets/images/slide/carbon-emission.png' />
+<img src='/assets/images/deck/carbon-emission.png' />
 
 
 ---
@@ -114,6 +120,10 @@ pie
 
 - Data Center: ~2 to 4%
 - Commercial Flights: ~2 to 3%
+
+---
+
+## Prediction
 
 > Data centers likely going to consume up to 10% of global electricity supply in the next decade.
 
@@ -130,7 +140,7 @@ pie
 
 ### Corporate Climate Commitments
 
-<img src='/assets/images/slide/gcloud-co2-dashboard.png' />
+<img src='/assets/images/deck/gcloud-co2-dashboard.png' />
 
 ---
 #

@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
   <style> 
   .reveal pre {
       box-shadow: none;
@@ -24,6 +28,10 @@
   }
   .reveal .slides {
     text-align: left;
+  }
+  :root {
+    --r-main-font: "Nunito", sans-serif;
+    --r-heading-font: "Nunito", sans-serif;
   }
   .copyright {
       bottom: 0;
@@ -62,8 +70,8 @@
       viewDistance: 5,
       overview: true,
       touch: true,
-      margin: 0.1,
-      slideNumber: 'c/t'
+      slideNumber: 'c/t',
+      margin: 0.1
     });
     
     document.addEventListener('keydown', function(event) {

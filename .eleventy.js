@@ -14,8 +14,8 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob("./writing/*.md").filter(post => !post.data.draft).sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("slides", function(collection) {
-    return collection.getFilteredByGlob("./slide/*.md").filter(slide => !slide.data.draft).sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("decks", function(collection) {
+    return collection.getFilteredByGlob("./deck/*.md").filter(deck => !deck.data.draft).sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("currentYear", () => {
