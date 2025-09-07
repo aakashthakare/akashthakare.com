@@ -1,10 +1,13 @@
 const { DateTime } = require("luxon");
 const readingTime = require('reading-time');
+const pluginCacheBuster = require("@mightyplow/eleventy-plugin-cache-buster");
+const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");
+   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
   
   eleventyConfig.addFilter("date", (dateObj, format = "yyyy-MM-dd") => {
      return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format);
@@ -36,6 +39,10 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
+
+  eleventyConfig.addPlugin(pluginCacheBuster({
+    outputDirectory: "_site"
+  }));
 
   return {
     dir: {
