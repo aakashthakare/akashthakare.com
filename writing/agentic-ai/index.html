@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Agentic AI</title>
+  <title>Agentic AI Overview</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico?v=a91e5b718252?v=ee0def4e8b3eb2656815b4a79603f856">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,9 +36,9 @@
   </nav>
   <main>
     
-<h1 style='padding-bottom:0;margin-bottom:0'>Agentic AI</h1>
-<small style='color:gray'>September 6, 2025</small>
-<small style='color:gray;float:right;'>3 min read</small>
+<h1 style='padding-bottom:0;margin-bottom:0'>Agentic AI Overview</h1>
+<small style='color:gray'>September 8, 2025</small>
+<small style='color:gray;float:right;'>6 min read</small>
 <hr/>
 
   </main>
@@ -51,13 +51,12 @@
 <img src='/assets/images/post/gmail_leave_draft_2.png?v=4519237b5d8e' height='450px' width='345px' />
 <p>Generative AI has already started disrupting many areas of human life. No business can remain untouched by this new technology, as it is transforming the way we work, think, solve problems, and even perceive the world.</p>
 <p>Agentic AI comprises of autonomous decision makers (<em>agents</em>) capable of independent action and goal-oriented behavior.
-Agentic AI concept is not new and has been around for decades. However, Agentic AI - <em><strong>built on top of GenAI</strong></em>; can not only create, but also decide and act which makes it even more powerful.</p>
-<p>In this post we will going to dive deeper into the world of Agentic AI.</p>
+Agentic AI concept is not new and has been around for decades. However, Agentic AI - <em>built on top of GenAI</em>; can not only create, but also decide and act which makes it even more powerful.</p>
 <h2>Beginning</h2>
-<p>In early 2000s Machine Learning started to emerge and we witnessed the significant developement in reinforcement learnings which is a crucial component of modern Agentic AI. The 2010s was the time of deep learning revolution; decade ending with GPT-3 in 2020 giving the agents <em>conversational</em> capabilities. So far, the current decade has seen significant developement in Agentic AI. These dots may seem not connected yet but we will connect them soon.</p>
+<p>In early 2000s Machine Learning started to emerge and we witnessed the significant developement in reinforcement learnings which is a crucial component of modern Agentic AI. The 2010s was the time of deep learning revolution; decade ending with GPT-3 in 2020 giving the agents <em>conversational</em> capabilities.</p>
 <p>Agentic AI may seem new, but it has a long history of research and development — from rule-based expert systems in the 1980s to sophisticated autonomous agents in the early 2020s.</p>
 <h2>Agent</h2>
-<img src='/assets/images/post/agent.png?v=43df634dc011' height='200px' width='150px' />
+<img src='/assets/images/post/agent.png?v=43df634dc011' height='300px' width='200px' />
 <p>Imagine an agent as a robot - able to understand, think and act on it's own - in a <em>digital</em> form.</p>
 <p>Unlike other conventional AI systems, Agentic AI is different in many terms especially autonomy, awareness, goal based decision making and adaptivity. Agents are at the core of this technology - an agent is a system which can understand the environment, indulge into reasoning, take decisions and act to achieve something with minimal human involvement.</p>
 <p>Agents are built of multiple layers which coordinates to enable intelligent behaviour.</p>
@@ -70,7 +69,58 @@ columns 3
   E[&quot;Action Execution Layer&quot;]
   F[&quot;Learning &amp; Adaption Layer&quot;]
 </pre>
-<p>We will dive into each layer to understand more on how this agents operates.</p>
+<p>We will take a high level look at each layer to understand more on how this agents operates.</p>
+<h3>Perception Layer</h3>
+<p>The perception layer is responsible for collecting and interpreting data from the environment. Data can be acquired through sensors, APIs, databases, and other sources. Before interpretation, it undergoes preprocessing steps such as extraction, normalization, and tokenization.</p>
+<p>Interpretation is then performed using models like computer vision, speech recognition, and natural language processing, which transform raw data into a structured and meaningful representation.</p>
+<h3>Reasoning Layer</h3>
+<p>The reasoning layer forms the core intelligence of the agent. It leverages Large Language Models (LLMs) and other reasoning techniques to understand context and make inferences—drawing conclusions from evidence, prior knowledge, and observations.</p>
+<p>This layer essentially mimics human thought: analyzing inputs, recalling memory, and arriving at logical conclusions.</p>
+<h3>Planning Layer</h3>
+<p>The planning layer is responsible for designing executable actions that achieve a defined goal. It breaks down complex tasks into smaller subtasks, arranges them in order based on dependencies and constraints, and can also prepare alternative strategies (Plan B) to handle unexpected failures.</p>
+<h3>Memory Layer</h3>
+<p>The memory layer provides context and continuity for decision-making. It keeps track of past events, records, and decisions, while gradually accumulating patterns, preferences, and workflows. Over time, this enables the agent to make more accurate and personalized decisions.</p>
+<h3>Action Execution Layer</h3>
+<p>The action execution layer translates planned actions into real-world execution. For instance, it may trigger API calls, initiate workflows, or interact with external systems to carry out the decisions made in earlier layers.</p>
+<h3>Learning &amp; Adaptation Layer</h3>
+<p>This layer ensures continuous improvement by learning from the outcomes of past actions. Through techniques like reward-based learning, model retraining, fine-tuning, and pattern mining, the agent adapts to new situations and evolves over time.</p>
+<img src='/assets/images/post/agenticai-architecture.png?v=041363208f04' height='650px' width='100%' />
+<h2>Multi-Agent</h2>
+<p>For complex goals multiple agents need to collaborate, in this setup  agents need to shares the context for effective collaboration. This set up can be centralised, decentralised or human-operated.</p>
+<ul>
+<li><strong>Centralized</strong>: An orchestrator - meta agent(s), they assigns the task and collect the progress to make sure the agents collectively achieve the original goal.</li>
+<li><strong>Decentralized</strong>: Agents communicate peer to peer, share the data and distribute work as per the need.</li>
+<li><strong>Human Operated</strong>: Human takes care of governance, review and decision making.</li>
+</ul>
+<img src='/assets/images/post/agenticai-agents.png?v=b30aacd16b52' height='220px' width='100%' />
+<p>Following would be the end to end high level workflow in multi-agent AgenticAI setup,</p>
+<pre class="mermaid">stateDiagram-v2
+    [*] --&gt; Perception
+    Perception --&gt; Reasoning
+    Reasoning --&gt; Planning
+    Planning --&gt; ActionExecution
+    ActionExecution --&gt; EnvironmentUpdate
+    EnvironmentUpdate --&gt; Feedback
+    Feedback --&gt; LearningAdaptation
+    LearningAdaptation --&gt; MemoryUpdate
+    MemoryUpdate --&gt; Perception : Repeat
+    
+    ActionExecution --&gt; HumanIntervention : Escalation
+    HumanIntervention --&gt; ActionExecution : Review
+    
+    ActionExecution --&gt; AgentCoordination : Delegate
+    AgentCoordination --&gt; ActionExecution : Aggregate
+</pre>
+<p>There are multiple abstractions in each of these layers, each has different components and services to be explored in depth.</p>
+<h2>Technologies By Layer</h2>
+<p>For better visualisation it would be essential to look into different technologies that can be used in each layer. There are numerous tools and technologies for setting up the architecture, we will try to mention basic and essential ones to keep things simple.</p>
+<img src='/assets/images/post/agenticai-architecture-with-tech.png?v=2c203d23bb96' height='850px' width='650px' />
+<p>It’s important to understand the purpose of each layer. At the same time, the tools mentioned are not the only options—there are a vast number of tools available for each layer, and in many cases, the same technology can be applied across multiple layers.</p>
+<p>This provides a high-level view of the Agentic AI architecture. In practice, the architecture we visualize always begins with the requirements. For example, building an image processing system for a large-scale enterprise with specific expectations may lead us to choose certain tools and technologies for each respective layer.</p>
+<h2>Summary</h2>
+<p>Agentic AI brings together multiple layers to create intelligent systems that can sense, think, and act autonomously.
+While we explored basic architecture and tools commonly used in each layer, the choice of implementation always depends on the problem at hand, the scale, and the requirements of the system being built.</p>
+<p>Agentic AI is still evolving, but understanding its architecture provides a strong foundation for designing practical and future-ready intelligent systems.</p>
 
   <footer>
     <small >&copy; 2025 Akash Thakare</small>
