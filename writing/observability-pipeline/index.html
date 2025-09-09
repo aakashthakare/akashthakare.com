@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Observability Pipeline</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico?v=a91e5b718252?v=ee0def4e8b3eb2656815b4a79603f856">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" />
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=235e70eac134?v=235e70eac134bee79c949be6d9fc99a6">
+  <script src="/assets/js/main.js?v=d41d8cd98f00?v=d41d8cd98f00b204e9800998ecf8427e"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li title='About'><a href="/" class=""><i class="fas fa-id-card"></i></a></li>
+      <li title='Writing'><a href="/writing/" class="active"><i class="fas fa-pen-nib"></i></a></li>
+      <li title='Deck'><a href="/deck/" class=""><i class="fas fa-clone"></i></a></li>
+    </ul>
+  </nav>
+  <main>
+    
+<h1 style='padding-bottom:0;margin-bottom:0'>Observability Pipeline</h1>
+<small style='color:gray'>September 9, 2025</small>
+<small style='color:gray;float:right;'>6 min read</small>
+<hr/>
+
+  </main>
+  <img src='/assets/images/post/observability-pipeline.png?v=bc92fc9e60d8' height='500px' width='100%' />
+<h2>Introduction</h2>
+<p>An observability pipeline is the end-to-end flow to capture, process, and visualize logs and metrics to gain insights into system health, performance, and user activity.</p>
+<p>There are several ways to build the pipeline using different tools and technologies. We will try to understand the components of the pipeline with the help of simple example.</p>
+<h2>Pipeline Overview</h2>
+<p>An observability pipeline typically handles the following operations on <em><strong>telemetry data</strong></em>,</p>
+<ul>
+<li>Collection</li>
+<li>Ingestion</li>
+<li>Processing</li>
+<li>Enrichment</li>
+<li>Storage</li>
+<li>Querying</li>
+<li>Correlation</li>
+<li>Visualisation</li>
+<li>Analytics</li>
+<li>Alerting</li>
+<li>Governance</li>
+</ul>
+<blockquote>
+<p><strong>Telementry Data</strong>: Collected information about a system’s performance, behavior, and health that is transmitted for monitoring and analysis</p>
+</blockquote>
+<p>The observability pipeline can include many components and operations as shown in the diagram below:</p>
+<img src='/assets/images/post/observability-pipeline-stages.png?v=344145bf66c3' height='350px' width='100%' />
+<p>Pipeline components often overlap with data pipelines, and technology choices vary by architecture and scale.</p>
+<ul>
+<li>
+<p><strong>Data Source</strong> : The origin of telemetry data - including application logs, system metrics, traces, and infrastructure logs. <em>Examples</em>: Applications (Java, Python etc.), Infrastructure (Kubernetes, Linux Servers etc.)</p>
+</li>
+<li>
+<p><strong>Collection</strong> : The lightweight mechanism that gathers telemetry from data sources via agents, SDKs, or APIs.
+<em>Examples</em>: Prometheus (Metric Collection), Filebeat</p>
+</li>
+<li>
+<p><strong>Processing</strong> : This can be a data pipeline to clean, filter, enrich, and transfortm the data into a processable format. <em>Examples</em>: Kafka, Datadog Processor</p>
+</li>
+<li>
+<p><strong>Storage</strong>: Telemetry data is persistently stored in suitable data stores. <em>Examples</em>: Elasticsearch, Grafana Loki, S3, Prometheus (Metric Store)</p>
+</li>
+<li>
+<p><strong>Query</strong>: Enables fast retrieval of telemetry data via domain specific query language. <em>Examples</em>: PromQL (Prometheus), Lucene/KQL (Elasticsearch), LogQL (Loki)</p>
+</li>
+<li>
+<p><strong>Visualisation</strong>: Present telemetry data through charts, graphs, heatmaps, geo-visualizations etc. to identify patterns, problems, trends and  anomalies. <em>Examples</em>: Grafana, Kibana, PowerBI</p>
+</li>
+<li>
+<p><strong>Alert</strong>: Define thresholds and rules that trigger notifications when systems behave abnormally or violate the rules. <em>Examples</em>: Grafana, Elastcsearch security</p>
+</li>
+<li>
+<p><strong>Automation</strong>: To triggers functions, workflows or events for respective action of scaling, remediation, rollback etc. <em>Examples</em>: Lambda, Ansible</p>
+</li>
+<li>
+<p><strong>Security</strong>: Controls and policies to secure telemetry data at every stage. Includes encryption, access controls, masking PII, and auditing. <em>Examples</em>: TLS, Okta, Secret Manager, IAM</p>
+</li>
+<li>
+<p><strong>Governance &amp; Compliance</strong>: Data management policies for usage, retention, and operational transparency. Ensures observability pipelines align with organizational and legal obligations. <em>Examples</em>: Open Policy Agent (OPA), IAM, Elastic Security</p>
+</li>
+</ul>
+<h2>Example</h2>
+<p>Let's build a very simple pipeline where we are ingesting user location detail and want to view the users on a world map. We will going to use following tools,</p>
+<ul>
+<li>Filebeat (Ingestion)</li>
+<li>Elastic Search (Search and Storage)</li>
+<li>Kibana (Visualisation and Analytics)</li>
+</ul>
+<p>Make sure you have docker already installed on your system, we will going to use it for a quick setup. If you are not familiar with it, you can visit <a href="https://www.docker.com/get-started/">this</a> page to get some basic understanding.</p>
+<p>Our goal is to generate some random logs, filebeat will ingest it to elastic search and kibana can help to view it on the world map. This small exercise will help us to understand the pipeline better.</p>
+<h3>Generating Sample Logs</h3>
+<p>We may need to write a small program to generate the random logs which we will ingest to filebeat.</p>
+<pre><code class="language-python">import json
+import time
+import random
+
+users = [&quot;mark&quot;, &quot;bob&quot;, &quot;charlie&quot;, &quot;david&quot;, &quot;james&quot;, &quot;carl&quot;, &quot;jennie&quot;, &quot;jane&quot;, &quot;alex&quot;]
+
+log_file = &quot;logs.json&quot;
+
+while True:
+    user = random.choice(users)
+    log = {
+        &quot;username&quot;: user,
+        &quot;location&quot;: {
+            &quot;lat&quot;: round(random.uniform(-90, 90), 6),
+            &quot;lon&quot;: round(random.uniform(-180, 180), 6)
+        }
+    }
+    with open(log_file, &quot;a&quot;) as f:
+        f.write(json.dumps(log) + &quot;\n&quot;)
+    time.sleep(1)
+</code></pre>
+<p>This script will keep on appending logs in <code>logs.json</code> file in following format,</p>
+<pre><code class="language-json">...
+{&quot;username&quot;: &quot;david&quot;, &quot;location&quot;: {&quot;lat&quot;: 46.638099, &quot;lon&quot;: -141.664286}}
+{&quot;username&quot;: &quot;jennie&quot;, &quot;location&quot;: {&quot;lat&quot;: 2.067681, &quot;lon&quot;: 6.107782}}
+{&quot;username&quot;: &quot;charlie&quot;, &quot;location&quot;: {&quot;lat&quot;: -68.763366, &quot;lon&quot;: -138.960341}}
+{&quot;username&quot;: &quot;bob&quot;, &quot;location&quot;: {&quot;lat&quot;: -62.107125, &quot;lon&quot;: -119.426837}}
+...
+</code></pre>
+<h3>Docker Compose Setup</h3>
+<p>Now, let's create <code>docker-compose.yml</code>,</p>
+<pre><code class="language-yml">version: &quot;3.9&quot;
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - &quot;9200:9200&quot;
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.0
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - &quot;5601:5601&quot;
+    depends_on:
+      - elasticsearch
+  
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.15.0
+    container_name: filebeat
+    user: root
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ./logs.json:/usr/share/filebeat/logs/logs.json
+    depends_on:
+      - elasticsearch
+    
+volumes:
+  es_data:
+</code></pre>
+<h3>Filebeat Configuration</h3>
+<p>We have added Elasticsearch, Kibana and Filebeat. For Filebeat we may need to supply additional configuration through <code>filebeat.yml</code>.</p>
+<pre><code class="language-yml">filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /usr/share/filebeat/logs/logs.json
+    start_position: beginning
+    json.keys_under_root: true 
+    json.add_error_key: true
+    json.overwrite_keys: true
+
+output.elasticsearch:
+  hosts: [&quot;http://elasticsearch:9200&quot;]
+</code></pre>
+<h3>Running the Pipeline</h3>
+<p>Once we have these files we can run following commands.</p>
+<ol>
+<li>Execute python scripts to keep on adding new log every second,</li>
+</ol>
+<pre><code class="language-shell">python3 log-generator.py
+</code></pre>
+<ol start="2">
+<li>Run <code>docker-compose</code> in separate terminal,</li>
+</ol>
+<pre><code class="language-shell">docker-compose up -d
+</code></pre>
+<h3>Accessing Services</h3>
+<p>This will spin the containers, first run will take few seconds to minutes. Once all the containers are running we can check following URLs,</p>
+<ul>
+<li>ElasticSearch: <a href="http://localhost:9200/">http://localhost:9200/</a></li>
+<li>Kibana: <a href="http://localhost:5601/">http://localhost:5601/</a></li>
+</ul>
+<h3>Kibana: Create Data View</h3>
+<p>In Kibana we will need to create a data view which specifies which elasticseach indices to use. This way we will be able to see our logs based on the time filter configured on top right.</p>
+<p>In the side bar,</p>
+<ul>
+<li>Analytics &gt; Discover &gt; Create a data view.</li>
+<li>Define an index pattern matching Filebeat indices, commonly <code>filebeat-*</code>.</li>
+<li>Save</li>
+</ul>
+<img src='/assets/images/post/kibana-edit-data-view.png?v=aec2091e9fe5' height='350px' width='550px' />
+<p><sub> <i>(*Index pattern is matching with three sources in my case which I created manually using dev tool but for your case it would be only one - data stream.)</i></sub></p>
+<p>Once we save this data view we can see logs are coming getting updated (update time filter or press refresh).</p>
+<img src='/assets/images/post/kibana-data-view.png?v=77c4289112c9' height='400px' width='100%' />
+<p>This confirms that the logs are properly getting ingested.</p>
+<h3>Visualizing User Locations on Map</h3>
+<p>Now we want to view these location on the map,</p>
+<ul>
+<li>In Kibana’s sidebar, go to Analytics &gt; Maps.</li>
+<li>Create a new map and add a new layer.</li>
+<li>Select the data view created earlier.</li>
+<li>Choose the location field (latitude/longitude) for geo mapping.</li>
+<li>Green dots representing user locations will appear on the world map.</li>
+</ul>
+<img src='/assets/images/post/kibana-add-map-layer.png?v=924b456d6bab' height='400px' width='100%' />
+<img src='/assets/images/post/kibana-add-layer-green-dots.png?v=1bad7cc09696' height='400px' width='100%' />
+<p>There are many other features in Kibana you can explore and experiment with to deepen your understanding.</p>
+<h2>Summary</h2>
+<p>The simple setup that we tried can be extended to more complex observability scenarios, enabling real-time insights into applications, infrastructure, and user activity across the globe.</p>
+<p>The starting point of any observability pipeline is the data source itself, along with a clear understanding of what you expect from that data—whether it’s querying, visualization, alerting, or automation.</p>
+
+  <footer>
+    <small >&copy; 2025 Akash Thakare</small>
+  </footer>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true
+    });
+  </script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>
