@@ -4,7 +4,7 @@ layout: post.njk
 date: 2025-09-08
 ---
 
-<img src='/assets/images/post/agenticai.png' height='500px' width='100%' />
+<img src='/assets/images/post/agenticai-overview/agenticai.png' height='500px' width='100%' />
 
 ## Introduction
 
@@ -14,8 +14,8 @@ Generative AI introduced the ability to generate new content based on prompts an
 
 You no longer need to draft an entire email yourself—simply write a prompt like: "Draft an email for my 3-day leave next week, from Monday to Thursday." (The prompt doesn’t even need to be grammatically correct!)
 
-<img src='/assets/images/post/gmail_leave_draft_1.png' height='450px' width='345px' />
-<img src='/assets/images/post/gmail_leave_draft_2.png' height='450px' width='345px' />
+<img src='/assets/images/post/agenticai-overview/gmail_leave_draft_1.png' height='450px' width='345px' />
+<img src='/assets/images/post/agenticai-overview/gmail_leave_draft_2.png' height='450px' width='345px' />
 
 Generative AI has already started disrupting many areas of human life. No business can remain untouched by this new technology, as it is transforming the way we work, think, solve problems, and even perceive the world.
 
@@ -30,7 +30,7 @@ Agentic AI may seem new, but it has a long history of research and development �
 
 ## Agent
 
-<img src='/assets/images/post/agent.png' height='300px' width='200px' />
+<img src='/assets/images/post/agenticai-overview/agent.png' height='300px' width='200px' />
 
 Imagine an agent as a robot - able to understand, think and act on it's own - in a _digital_ form.
 
@@ -79,7 +79,7 @@ The action execution layer translates planned actions into real-world execution.
 
 This layer ensures continuous improvement by learning from the outcomes of past actions. Through techniques like reward-based learning, model retraining, fine-tuning, and pattern mining, the agent adapts to new situations and evolves over time.
 
-<img src='/assets/images/post/agenticai-architecture.png' height='650px' width='100%' />
+<img src='/assets/images/post/agenticai-overview/agenticai-architecture.png' height='650px' width='100%' />
 
 ## Multi-Agent
 
@@ -89,7 +89,7 @@ For complex goals multiple agents need to collaborate, in this setup  agents nee
 - **Decentralized**: Agents communicate peer to peer, share the data and distribute work as per the need.
 - **Human Operated**: Human takes care of governance, review and decision making.
 
-<img src='/assets/images/post/agenticai-agents.png' height='220px' width='100%' />
+<img src='/assets/images/post/agenticai-overview/agenticai-agents.png' height='220px' width='100%' />
 
 Following would be the end to end high level workflow in multi-agent AgenticAI setup,
 
@@ -118,7 +118,7 @@ There are multiple abstractions in each of these layers, each has different comp
 
 For better visualisation it would be essential to look into different technologies that can be used in each layer. There are numerous tools and technologies for setting up the architecture, we will try to mention basic and essential ones to keep things simple.
 
-<img src='/assets/images/post/agenticai-architecture-with-tech.png' height='850px' width='650px' />
+<img src='/assets/images/post/agenticai-overview/agenticai-architecture-with-tech.png' height='850px' width='650px' />
 
 It’s important to understand the purpose of each layer. At the same time, the tools mentioned are not the only options—there are a vast number of tools available for each layer, and in many cases, the same technology can be applied across multiple layers.
 

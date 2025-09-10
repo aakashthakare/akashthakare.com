@@ -7,7 +7,7 @@ templateEngineOverride: false
 # 
 <center>
     <h2>Carbon Emission</h2>
-    <img src="/assets/images/deck/co2-plane-datacenter.png" height="600px" width="100%" />
+    <img src="/assets/images/deck/carbon-emission/co2-plane-datacenter.png" height="600px" width="100%" />
 <center>
 
 ---
@@ -111,7 +111,7 @@ pie
 
 ## Data Centers
 
-<img src='/assets/images/deck/carbon-emission.png' />
+<img src='/assets/images/deck/carbon-emission/carbon-emission.png' />
 
 
 ---
@@ -140,8 +140,4 @@ pie
 
 ### Corporate Climate Commitments
 
-<img src='/assets/images/deck/gcloud-co2-dashboard.png' />
-
----
-#
-<center> <h1> Thank You!</h1></center>
+<img src='/assets/images/deck/carbon-emission/gcloud-co2-dashboard.png' />

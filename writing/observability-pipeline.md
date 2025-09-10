@@ -4,7 +4,7 @@ layout: post.njk
 date: 2025-09-09
 ---
 
-<img src='/assets/images/post/observability-pipeline.png' height='500px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/observability-pipeline.png' height='500px' width='100%' />
 
 ## Introduction
 
@@ -32,7 +32,7 @@ An observability pipeline typically handles the following operations on ***telem
 
 The observability pipeline can include many components and operations as shown in the diagram below:
 
-<img src='/assets/images/post/observability-pipeline-stages.png' height='350px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/observability-pipeline-stages.png' height='350px' width='100%' />
 
 Pipeline components often overlap with data pipelines, and technology choices vary by architecture and scale.
 
@@ -202,13 +202,13 @@ In the side bar,
 - Define an index pattern matching Filebeat indices, commonly `filebeat-*`.
 - Save
 
-<img src='/assets/images/post/kibana-edit-data-view.png' height='350px' width='550px' />
+<img src='/assets/images/post/observability-pipeline/kibana-edit-data-view.png' height='350px' width='550px' />
 
 <sub> <i>(*Index pattern is matching with three sources in my case which I created manually using dev tool but for your case it would be only one - data stream.)</i></sub>
 
 Once we save this data view we can see logs are coming getting updated (update time filter or press refresh).
 
-<img src='/assets/images/post/kibana-data-view.png' height='400px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/kibana-data-view.png' height='400px' width='100%' />
 
 This confirms that the logs are properly getting ingested.
 
@@ -222,9 +222,9 @@ Now we want to view these location on the map,
 - Choose the location field (latitude/longitude) for geo mapping.
 - Green dots representing user locations will appear on the world map.
 
-<img src='/assets/images/post/kibana-add-map-layer.png' height='400px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/kibana-add-map-layer.png' height='400px' width='100%' />
 
-<img src='/assets/images/post/kibana-add-layer-green-dots.png' height='400px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/kibana-add-layer-green-dots.png' height='400px' width='100%' />
 
 There are many other features in Kibana you can explore and experiment with to deepen your understanding.
 

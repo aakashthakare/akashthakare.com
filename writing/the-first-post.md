@@ -4,7 +4,7 @@ date: 2025-08-12
 layout: post.njk
 ---
 
-<img src='/assets/images/post/new-journey.png' height='400px' width='300px' />
+<img src='/assets/images/post/the-first-post/new-journey.png' height='400px' width='300px' />
 
 I’ve decided to start writing my blog posts here as well. The existing [blog](https://www.blog.akashthakare.com/) will continue to remain there.
 

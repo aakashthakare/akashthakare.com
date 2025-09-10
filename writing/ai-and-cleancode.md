@@ -4,7 +4,7 @@ layout: post.njk
 date: 2025-08-21
 ---
 
-<img src='/assets/images/post/ai-and-clean-code-cover.png' height='500px' width='100%' />
+<img src='/assets/images/post/ai-and-cleancode/ai-and-clean-code-cover.png' height='500px' width='100%' />
 
 ## Clean Code
 
@@ -45,7 +45,7 @@ Currently, the majority of software developers are using coding assistants — b
 
 Remember, the navigator may distract or show wrong direction. (_imagine your parent/spouse_ 😅).
 
-<img src='/assets/images/post/driver-navigator.png' height='450px' width='100%' />
+<img src='/assets/images/post/ai-and-cleancode/driver-navigator.png' height='450px' width='100%' />
 
 Coding assistant is growing much faster than expected because of the backed models and industry shift. Organisations are competing for _faster_ growth along with better quality. There are numerous coding assistants which are shaping (_changing_) the way we developers code.
 
