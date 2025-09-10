@@ -29,9 +29,9 @@
 <body>
   <nav>
     <ul>
-      <li title='About'><a href="/" class=""><i class="fas fa-id-card"></i></a></li>
-      <li title='Writing'><a href="/writing/" class="active"><i class="fas fa-pen-nib"></i></a></li>
-      <li title='Deck'><a href="/deck/" class=""><i class="fas fa-clone"></i></a></li>
+      <li title='Home'><a href="/" class=""><i class="fas fa-home"></i></a></li>
+      <li title='Writing'><a href="/writing/" class="active"><i class="fas fa-feather"></i></a></li>
+      <li title='Deck'><a href="/deck/" class=""><i class="fas fa-chalkboard"></i></a></li>
     </ul>
   </nav>
   <main>
@@ -42,7 +42,7 @@
 <hr/>
 
   </main>
-  <img src='/assets/images/post/observability-pipeline.png?v=bc92fc9e60d8' height='500px' width='100%' />
+  <img src='/assets/images/post/observability-pipeline/observability-pipeline.png?v=bc92fc9e60d8' height='500px' width='100%' />
 <h2>Introduction</h2>
 <p>An observability pipeline is the end-to-end flow to capture, process, and visualize logs and metrics to gain insights into system health, performance, and user activity.</p>
 <p>There are several ways to build the pipeline using different tools and technologies. We will try to understand the components of the pipeline with the help of simple example.</p>
@@ -65,7 +65,7 @@
 <p><strong>Telementry Data</strong>: Collected information about a system’s performance, behavior, and health that is transmitted for monitoring and analysis</p>
 </blockquote>
 <p>The observability pipeline can include many components and operations as shown in the diagram below:</p>
-<img src='/assets/images/post/observability-pipeline-stages.png?v=344145bf66c3' height='350px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/observability-pipeline-stages.png?v=344145bf66c3' height='350px' width='100%' />
 <p>Pipeline components often overlap with data pipelines, and technology choices vary by architecture and scale.</p>
 <ul>
 <li>
@@ -220,10 +220,10 @@ output.elasticsearch:
 <li>Define an index pattern matching Filebeat indices, commonly <code>filebeat-*</code>.</li>
 <li>Save</li>
 </ul>
-<img src='/assets/images/post/kibana-edit-data-view.png?v=aec2091e9fe5' height='350px' width='550px' />
+<img src='/assets/images/post/observability-pipeline/kibana-edit-data-view.png?v=aec2091e9fe5' height='350px' width='550px' />
 <p><sub> <i>(*Index pattern is matching with three sources in my case which I created manually using dev tool but for your case it would be only one - data stream.)</i></sub></p>
 <p>Once we save this data view we can see logs are coming getting updated (update time filter or press refresh).</p>
-<img src='/assets/images/post/kibana-data-view.png?v=77c4289112c9' height='400px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/kibana-data-view.png?v=77c4289112c9' height='400px' width='100%' />
 <p>This confirms that the logs are properly getting ingested.</p>
 <h3>Visualizing User Locations on Map</h3>
 <p>Now we want to view these location on the map,</p>
@@ -234,8 +234,8 @@ output.elasticsearch:
 <li>Choose the location field (latitude/longitude) for geo mapping.</li>
 <li>Green dots representing user locations will appear on the world map.</li>
 </ul>
-<img src='/assets/images/post/kibana-add-map-layer.png?v=924b456d6bab' height='400px' width='100%' />
-<img src='/assets/images/post/kibana-add-layer-green-dots.png?v=1bad7cc09696' height='400px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/kibana-add-map-layer.png?v=924b456d6bab' height='400px' width='100%' />
+<img src='/assets/images/post/observability-pipeline/kibana-add-layer-green-dots.png?v=1bad7cc09696' height='400px' width='100%' />
 <p>There are many other features in Kibana you can explore and experiment with to deepen your understanding.</p>
 <h2>Summary</h2>
 <p>The simple setup that we tried can be extended to more complex observability scenarios, enabling real-time insights into applications, infrastructure, and user activity across the globe.</p>
