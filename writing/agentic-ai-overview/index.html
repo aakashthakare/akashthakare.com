@@ -36,26 +36,37 @@
   </nav>
   <main>
     
+
 <h1 style='padding-bottom:0;margin-bottom:0'>Agentic AI Overview</h1>
+
 <small style='color:gray'>September 8, 2025</small>
 <small style='color:gray;float:right;'><i class="fas fa-book-open"></i> 6 min read</small>
 <small style='color:gray;float:right;margin-right:10px;'><i class="fas fa-eye"></i>&nbsp;<span id="views"></span></small>
+
 <hr/>
+
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 <script>
-  async function view() {
-    try {
-      const title = 'Agentic AI Overview';
-      const post = "writing-" + title.toLowerCase().replace(/ /g, '-');
-      const url = "https://counterapi.com/api/akashthakare/"+ post +"/hit";
-      const response = await fetch(url);
-      const data = await response.json();
-      document.getElementById("views").textContent = data.value;
-    } catch (error) {
-      console.error("Error fetching views:", error);
-    }
-  }
-  view();
+  const counterName = 'atwriting-' + 'agentic-ai-overview';
+  
+  const counter = new Counter({ 
+    workspace: 'atdotcom'
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const counter = new Counter({ workspace: 'atdotcom' });
+
+    counter.up(counterName)
+      .then(result => {
+        document.getElementById('views').textContent = result.data.up_count;
+      })
+      .catch(error => {
+        console.error('Error tracking page view:', error);
+        document.getElementById('view-count').textContent = '0';
+      });
+  });
 </script>
+
 
   </main>
   <img src='/assets/images/post/agenticai-overview/agenticai.png?v=d815c35a5565' height='500px' width='100%' />
