@@ -41,3 +41,14 @@ blockquote {
   padding-left: 5px;
   color: #888;
 }
+
+a, a:link, a:visited, a:active {
+  font-weight: bold;
+  color: #555;
+  text-decoration: none;
+}
+
+a:hover {
+  color:  #000;
+  text-decoration: underline;
+}

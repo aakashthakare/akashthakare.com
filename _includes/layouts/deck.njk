@@ -29,10 +29,12 @@
   .reveal .slides {
     text-align: left;
   }
+
   :root {
     --r-main-font: "Nunito", sans-serif;
     --r-heading-font: "Nunito", sans-serif;
   }
+
   .copyright {
       bottom: 0;
       color: lightgray;
@@ -77,13 +79,15 @@
     
     document.addEventListener('keydown', function(event) {
       if (event.key.toLowerCase() === 'x') {
-        window.location.href = '/';
+        window.location.href = '/deck';
       }
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
-    mermaid.initialize({ startOnLoad: true });
+    Reveal.on('ready', () => {
+      mermaid.initialize({ startOnLoad: true });
+    });
   </script>
 </body>
 </html>
