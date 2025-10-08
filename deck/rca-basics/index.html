@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Carbon Emission</title>
+  <title>Root Cause Analysis (Basics)</title>
 
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico?v=a91e5b718252?v=ee0def4e8b3eb2656815b4a79603f856">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
@@ -56,143 +56,87 @@
       <section data-markdown>
         <script type="text/template">
           
-# 
-<center>
-    <h2>Carbon Emission</h2>
-    <img src="/assets/images/deck/carbon-emission/co2-plane-datacenter.png?v=aec80796ec61" height="600px" width="100%" />
-<center>
+## Root Cause Analysis (Basics)
+
+<img src='/assets/images/deck/rca-basic/rca_basic_first_slide.png?v=e6117553cb4f' width='100%' height='500px'/>
 
 ---
 
-## Definition
+## What is RCA?
 
-Carbon emission refers to the release of Carbon Dioxide (CO<sub>2</sub>) into the atmosphere due to **human** activities or natural processes.
+A problem-solving method..
 
----
-
-## Absorption
-
-```mermaid
-flowchart
-    A[Total CO2 Emissions ~250 Gt/year] -->|Natural Emissions ~210 Gt| B[Nature Absorbs ~210 Gt]
-    A -->|Human Emissions ~40 Gt| C[Human CO2 Emissions]
-    C -->|Absorbed by Nature ~20 Gt| B
-    C -->|Remains in Atmosphere ~20 Gt| D[Atmospheric CO2 Increase]
-```
+- to identify the underlying cause(s) of an issue.
+- to fix actual cause instead of just addressing symptoms.
+- to prevent recurring issues.
 
 ---
 
-## Distribution
+## Why Do We Need RCA?
 
-```mermaid
-pie title Carbon Emission Per Year
-    "Humans" : 40
-    "Nature" : 210
-```
+- To understand the ***why***
+- Saves time and money in the longer run.
 
 ---
 
-## Nature
+## Key Principles
 
-Nature produces the CO2 through,
-
-- Respiration
-- Decomposition
-- Volcanos
-- Wild Fire etc.
-
-and absorbs through,
-
-- Forest (~30%)
-- Ocean (~30%)
+1. Focus on the cause, not symptoms.
+2. Use data, avoid assumptions
+3. Don't blame, identify prevention.
 
 ---
 
-## Humans
+## Remember
 
-Humans produces the CO2 through,
-
-- Industry
-- Manufacturing
-- Electricity
-- Transportation
-- Farming
-- Deforestation
-- Crop Residue Burning etc.
+> 💡 There can be multiple root causes!
 
 ---
 
-## Average
+## 6 Step Process
 
-- 2010-2019, average annual increase was ~1.8%.
-- 2020, pandemic led to ~5% decrease. 🍀
-- 2021, rebounded with **~6%** increase. ❗️
-- Recent average is around ~1.2%.
-
----
-
-## Human CO<sub>2</sub> Distribution
-
-```mermaid
-pie 
-    "⚡️" : 35
-    "🚃" : 25
-    "🏭" : 15
-    "🌾": 10
-    "🪓": 10
-    "...": 5
-```
+1. Define the Problem
+2. Gather Data
+3. Identify Possible Causes
+4. Find the Root Cause
+5. Implement Solutions
+6. Monitor Results
 
 ---
 
-## CO<sub>2</sub> By Sources
+## Methods
 
-- Coal: ~1kg/kWh ‼️
-- Natural Gas: ~0.5kg/kWh
-- Oil: ~0.75kg/kWh
-- Solar: ~40g/kWh
-- Nuclear/ Wind/ Hydropower: < 15g/kWh
+- 5 Whys Analysis: Ask "Why" repeatedly until the root cause is identified.
+- Pareto Analysis (80/20 rule).
 
 ---
 
-## Example
+## Example: Ask Why?
 
-> With Coal; 1-ton air conditioner used for an hour generates ~1kg of CO2.
+Problem: Application Server went down.
 
----
+1. **Why?** Application Server crashed.
+2. **Why?** High memory usage.
+3. **Why?** Memory was occupied even after API response.
+4. **Why?** Memory leak happened.
+5. **Why?** IO resources kept open.
 
-## Data Centers
-
-<img src='/assets/images/deck/carbon-emission/carbon-emission.png?v=45d9985b5f23' />
-
-
----
-
-### Aviation & Cloud
-
-- Data Center: ~2 to 4%
-- Commercial Flights: ~2 to 3%
+**Root Cause**: Code review process / Lack of Memory leak awareness.
 
 ---
 
-## Prediction
+## Best Practices
 
-> Data centers likely going to consume up to 10% of global electricity supply in the next decade.
-
----
-
-## Solution
-
-- Renewable Energy
-- Policy Change
-- Reforestation
-- Energy Efficiency
+- Involve the right stakeholders.
+- Regularly review and document RCA learnings.
+- Guide new members with RCA process.
+- Share RCA learnings with other members.
 
 ---
 
-### Corporate Climate Commitments
+## 😌 Yes!
 
-<img src='/assets/images/deck/carbon-emission/gcloud-co2-dashboard.png?v=1aea151eb9d8' />
+> RCA can be super challenging but extremely rewarding if you are passionate about it!
 
         </script>
       </section>
